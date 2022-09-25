@@ -15,7 +15,7 @@ st.title('Plotly Data Visualizations')
 st.header('Welcome to our collection of plotly visualizations!')
 st.subheader("Stock")
 st.caption("A plot of the Apple Stock from 2015 to 2022, showing the Open, High, Low, and Close values")
-df1 = pd.read_csv(r'/Users/apple/Desktop/appl.csv')
+df1 = pd.read_csv('appl.csv')
 
 with st.expander("APPL Data"):
             st.write(df1)
@@ -54,7 +54,7 @@ st.plotly_chart(fig1)
 st.subheader("Korea Demographics")
 st.caption("The graph shows the rates of marriage, divorce, birth and death in all of Korea's Regions from 2000 to 2022")
 st.caption('Choose a Region in order to explore the changes in its demographic rates over the years')
-df2 = pd.read_csv(r'/Users/apple/Desktop/korea demo.csv')
+df2 = pd.read_csv('korea demo.csv')
 with st.expander("Korean Demographics Data"):
             st.write(df2)
 region_list = df2["Region"].unique()
@@ -84,7 +84,7 @@ st.write(fig3)
 st.subheader("CO2 Emission")
 st.caption("The scatter plot represents the co2 emission of all countries in 2019")
 st.caption("Choose one or more regions to explore the amount of CO2 emitted by each country in 2019")
-df4 = pd.read_csv(r'/Users/apple/Desktop/co2.csv')
+df4 = pd.read_csv('co2.csv')
 with st.expander("CO2 Emission Data"):
             st.write(df4)
 options = st.multiselect(
@@ -128,7 +128,7 @@ fig4.update_layout(
 st.write(fig4)  
 st.subheader("Honey Production in the US")
 
-df5 = pd.read_csv(r'/Users/apple/Desktop/honey.csv')
+df5 = pd.read_csv('honey.csv')
 with st.expander("Honey Production Data"):
             st.write(df5)
 st.caption("The animation shows the total production and production value of Honey from 1998 to 2012 in each state in the US")
